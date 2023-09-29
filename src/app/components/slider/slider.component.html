@@ -1,0 +1,29 @@
+<div *ngFor="let lista of items" class="text-lg mt-10 font-bold">
+  <h1 class="text-lg font-bold">{{ lista.subtitulo }}</h1>
+  <swiper-container class="swiper bg-slate-100 p-3 w-full" slides-per-view="6" pagination-clickable="true">
+      <div *ngFor="let item of lista.libro" class="swiper-slide">
+        <div class="w-36 p-4 bg-white text-center flex justify-center flex-col items-center">
+          <img class="w-20" [src]="item.imagen" alt=".jpg">
+          <p class="text-sm leading-none font-serif">{{ item.nombre }}</p> 
+          <p class="pt-2 font-serif text-xs leading-none text-zinc-400">{{ item.autor }}</p>
+          <button mat-flat-button (click)="OpenReserve()" 
+          class ="rounded-full hover:bg-[#06345F] text-xs hover:text-zinc-300 border-2 border-[#06345F] p-1 px-3 mt-2 text-[#06345F]">{{ 'BUTTONS.RESERVE' | translate}}</button>
+        </div>
+      </div>
+  </swiper-container>
+</div>
+<!-- <swiper-container class="swiper-container bg-slate-100 p-3 w-full" effect="coverflow" 
+centered-slides="true" slides-per-view="2" pagination-clickable="true"
+space-between="30" coverflow-effect-rotate="0" coverflow-effect-stretch="440" 
+coverflow-effect-depth="40" coverflow-effect-modifier="1" 
+coverflow-effect-slide-shadows="false">
+    <div *ngFor="let item of items" class="swiper-slide">
+      <div class="w-36 p-4 bg-white text-center flex justify-center flex-col items-center">
+        <img class="w-20" [src]="item.imagen" alt=".jpg">
+        <p class="text-sm leading-none font-serif">{{ item.nombre }}</p> 
+        <p class="pt-2 font-serif text-xs leading-none text-zinc-400">{{ item.autor }}</p>
+        <button mat-flat-button (click)="OpenReserve()" 
+        class ="rounded-full hover:bg-[#06345F] text-xs hover:text-zinc-300 border-2 border-[#06345F] p-1 px-3 mt-2 text-[#06345F]">{{ 'BUTTONS.RESERVE' | translate}}</button>
+      </div>
+    </div>
+</swiper-container> -->

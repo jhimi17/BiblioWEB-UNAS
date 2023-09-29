@@ -1,0 +1,21 @@
+{
+    "SIDEBAR": {
+       "SOL_LIB": "Book Request",
+       "SOL_CAR": "Application for Carnets",
+       "EST_SOL": "Application Status"
+    },
+  
+    "HEADER": {
+       "HOME": "Home",
+       "GROUPS": "Groups",
+       "NOTIFICATIONS": "Notifications",
+       "PROFILE": "Profile"
+    },
+  
+    "BUTTONS":{
+       "SEARCH": "Search",
+       "SUGGETS": "Suggets",
+       "RESERVE": "Reserve"
+    }
+  
+  }

@@ -1,0 +1,88 @@
+<div class="sidebar" [ngClass]="{ 'expanded': isExpanded }">
+  <div class="header">
+    <h1 class="title">
+      UNAS
+    </h1>
+    <div class="toggle" (click)="handleSidebarToggle()">
+      <span class="chevron"></span>
+    </div>
+  </div>
+  <div class="content">
+    <div class="link">
+      <div class="content" [routerLink]="['/list']" [routerLinkActive]="'active'">
+        <div class="icon">
+          <mat-icon matSuffix>library_books</mat-icon>
+        </div>
+        <div class="title">{{ 'SIDEBAR.SOL_LIB' | translate}}</div>
+      </div>
+    </div>
+    <div class="link">
+      <div class="content" [routerLink]="['#']" [routerLinkActive]="'active'">
+        <div class="icon">
+          <mat-icon matSuffix>badge</mat-icon>
+        </div>
+        <div class="title">{{ 'SIDEBAR.SOL_CAR' | translate}}</div>
+      </div>
+    </div>
+    <!-- <div class="link with-children">
+      <div class="content" [routerLink]="['/configuration']" [routerLinkActive]="'active'">
+        <div class="icon">
+         
+        </div>
+        <div class="title">Configuration</div>
+      </div>
+      <div class="children">
+        <div class="link">
+          <div class="content" [routerLink]="['/configuration']" [queryParams]="{ 'child': '1' }"
+            [routerLinkActive]="'active'">
+            <div class="icon">
+             
+            </div>
+            <div class="title">child 1</div>
+          </div>
+        </div>
+        <div class="link">
+          <div class="content" [routerLink]="['/configuration']" [queryParams]="{ 'child': '2' }"
+            [routerLinkActive]="'active'">
+            <div class="icon">
+           
+            </div>
+            <div class="title">child 2</div>
+          </div>
+        </div>
+        <div class="link">
+          <div class="content" [routerLink]="['/configuration']" [queryParams]="{ 'child': '3' }"
+            [routerLinkActive]="'active'">
+            <div class="icon">
+         
+            </div>
+            <div class="title">child 3</div>
+          </div>
+        </div>
+      </div>
+    </div>  -->
+    <div class="link">
+      <div class="content" [routerLink]="['#']" [routerLinkActive]="'active'">
+        <div class="icon">
+          <mat-icon matSuffix>display_settings</mat-icon>
+        </div>
+        <div class="title">{{ 'HEADER.GROUPS' | translate}}</div>
+      </div>
+    </div>
+    <div class="link">
+      <div class="content" [routerLinkActive]="'active'">
+        <div class="icon">
+          <mat-icon matSuffix>g_translate</mat-icon>
+        </div>
+        <div class="title">
+          <app-switch-languages></app-switch-languages>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    
+  </div>
+</div>

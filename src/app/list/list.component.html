@@ -1,0 +1,33 @@
+<div class="p-6">
+  <div class="flex flex-col items-center">
+    <h1 class="text-2xl text-start font-bold block mb-2 me-80">Búsqueda de libros</h1>
+    <div class="flex flex-row justify-center">
+      <label class="relative block">
+        <span class="sr-only">Search</span>
+        <!-- <mat-icon matSuffix>search</mat-icon> -->
+        <input
+          class="placeholder:italic placeholder:text-slate-400 block bg-white w-96 border border-[#06345F] rounded-full py-2 pl-9 shadow-sm focus:outline-none focus:border-[#06345F] focus:ring-sky-500 focus:ring-1 sm:text-sm"
+          placeholder="Título o autor..."
+          type="text"
+          name="search"
+        />
+      </label>
+      <button 
+        class="mx-2 bg-[#06345F] text-white w-20 h-10 rounded-full hover:bg-white hover:text-[#06345F] border hover:border-blue-900"
+      >
+        {{ "BUTTONS.SEARCH" | translate }}
+      </button>
+      <button mat-flat-button (click)="OpenSuggest()" 
+      class="mx-2 bg-[#06345F] text-white w-20 h-10 rounded-full hover:bg-white hover:text-[#06345F] border hover:border-blue-900">
+        {{ "BUTTONS.SUGGETS" | translate }}
+      </button>
+    </div>
+  </div>
+
+  <!-- <h1 class="text-lg font-bold">Vistos recientemente</h1>
+  <app-slider></app-slider>
+  <h1 class="text-lg mt-10 font-bold">Nuevas adquisiciones</h1>
+  <app-slider></app-slider>
+  <h1 class="text-lg mt-10 font-bold">Los más solicitados</h1> -->
+  <app-slider></app-slider>
+</div>

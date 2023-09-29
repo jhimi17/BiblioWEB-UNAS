@@ -1,0 +1,14 @@
+<div class="pb-2">
+
+    <div class="flex-grow bg-white">
+        <div class="flex justify-center items-center px-4 py-5 bg-[#06345F] text-white">
+            <div class="space-x-10 flex items-center" style="font-size: 19px;">
+                <a [routerLink]="['/home']" [routerLinkActive]="'active'" class="text-white"> <mat-icon matSuffix class="py-1">home</mat-icon> {{ 'HEADER.HOME' | translate}}</a>
+                <a [routerLink]="['#']" [routerLinkActive]="'active'" class="text-white"><mat-icon matSuffix class="py-1">groups</mat-icon>  {{ 'BUTTONS.SEARCH' | translate}}</a>
+                <a [routerLink]="['#']" [routerLinkActive]="'active'" class="text-white"><mat-icon matSuffix class="py-1">notifications</mat-icon> {{ 'HEADER.NOTIFICATIONS' | translate}}</a>
+                <a [routerLink]="['#']" [routerLinkActive]="'active'" class="text-white"><mat-icon matSuffix class="py-1">person</mat-icon> {{ 'HEADER.PROFILE' | translate}}</a>
+            </div>
+        </div>
+    </div>
+  
+</div>

@@ -1,0 +1,21 @@
+{
+    "SIDEBAR": {
+       "SOL_LIB": "Aplicação do livro",
+       "SOL_CAR": "Pedido de caderneta",
+       "EST_SOL": "Estado da candidatura"
+    },
+  
+    "HEADER": {
+       "HOME": "Início",
+       "GROUPS": "Grupos",
+       "NOTIFICATIONS": "Notificações",
+       "PROFILE": "Perfil"
+    },
+  
+    "BUTTONS":{
+       "SEARCH": "Pesquisar",
+       "SUGGETS": "Sugerir",
+       "RESERVE": "Livro"
+    }
+  
+  }

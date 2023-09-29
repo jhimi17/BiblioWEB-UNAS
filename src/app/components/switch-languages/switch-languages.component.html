@@ -1,0 +1,3 @@
+<select (change)="onchange($event)" class="bg-[#06345F]">
+    <option *ngFor="let option of options" [value]=" option.value">{{ option.display }}</option>
+</select>
