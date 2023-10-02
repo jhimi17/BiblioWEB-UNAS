@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialogRef} from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ListComponent } from '../list/list.component';
-import { AlertServise } from '../components/services/alert.service';
+import { AlertServise } from '../../shared/services/alert.service';
 
 @Component({
   selector: 'app-suggest',

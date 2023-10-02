@@ -1,6 +1,2 @@
-<app-header></app-header>
-<app-sidebar [isExpanded]="sidebarExpanded" (toggleSidebar)="sidebarExpanded = !sidebarExpanded"></app-sidebar>
-<div class="content" [ngClass]="{ 'sidebarExpanded': sidebarExpanded }">
-  <div  *ngIf="showAlert" class=" bg-green-500 text-white px-4 py-4 rounded shadow-md fixed top-14 right-4 max-w-2xl">{{message}}</div>
-  <router-outlet></router-outlet>
-</div>
+
+<router-outlet></router-outlet>

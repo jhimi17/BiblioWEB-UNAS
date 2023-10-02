@@ -3,10 +3,11 @@ import Swiper from 'swiper';
 import { MatDialog } from '@angular/material/dialog';
 import { ReserveComponent } from '../../reserve/reserve.component';
 
+
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.css'],
+  styleUrls: ['./slider.component.css']
 })
 export class SliderComponent {
 

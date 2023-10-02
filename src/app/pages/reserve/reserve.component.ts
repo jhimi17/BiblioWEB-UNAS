@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialogRef} from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AlertServise } from '../components/services/alert.service';
+import { AlertServise } from '../../shared/services/alert.service';
 import { SliderComponent } from '../components/slider/slider.component';
 
 @Component({

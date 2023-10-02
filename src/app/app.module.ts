@@ -1,65 +1,36 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {MatButtonModule} from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { EntityDataModule } from '@ngrx/data';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListComponent } from './list/list.component';
-import { SuggestComponent } from './suggest/suggest.component';
-import { ReserveComponent } from './reserve/reserve.component';
-import { HomeComponent } from './home/home.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { SliderComponent } from './components/slider/slider.component';
-import { register } from 'swiper/element/bundle';
-import { HeaderComponent } from './components/header/header.component';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatInputModule} from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon';
-import {MatCardModule} from '@angular/material/card';
-import { LoginComponent } from './login/login.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { FormsModule } from '@angular/forms';
-import { MatTooltipModule} from '@angular/material/tooltip'
-import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { register } from 'swiper/element/bundle';
+
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { SwitchLanguagesComponent } from './components/switch-languages/switch-languages.component';
-import {MatSelectModule} from '@angular/material/select';
+
+import { AuthModule } from './auth/auth.module';
+import { PrivateModule } from './pages/private.module';
 
 
-register();
+export function HttLoaderFactory(http: HttpClient){
+  return new TranslateHttpLoader(http, './assets/languages/', '.json');
+}
+
+
+//register();
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent,
-    SuggestComponent,
-    ReserveComponent,
-    HomeComponent,
-    SidebarComponent,
-    SliderComponent,
-    HeaderComponent,
-    LoginComponent,
-    SwitchLanguagesComponent
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    MatSlideToggleModule,
     BrowserAnimationsModule,
-    MatInputModule,
-    FormsModule,
-    MatIconModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatCardModule,
-    MatTooltipModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatSelectModule,
+    AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
@@ -67,14 +38,17 @@ register();
         useFactory: HttLoaderFactory,
         deps: [ HttpClient ]
       }
-    })
+    }),
+   // EntityDataModule.forRoot({}),
+   PrivateModule,
+    AuthModule,
+    
   ],
-  providers: [],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }
 
-export function HttLoaderFactory(http: HttpClient){
-  return new TranslateHttpLoader(http, './assets/languages/', '.json');
-}
